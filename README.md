@@ -8,9 +8,7 @@ python -m ensurepip --upgrade
 python -m pip install -r requirements.txt -i https://mirrors.aliyun.com/pypi/simple
 source .venv/bin/activate
 ```
-python -m pip install requests -i https://mirrors.aliyun.com/pypi/simple
 
-requests
 ### 离线运行示例
 
 默认是使用 demo_data/output.xlsx 数据。参数：xlsx 文件路径，高意向评论条数。
