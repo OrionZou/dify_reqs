@@ -4,9 +4,9 @@
 
 ```bash
 uv venv .venv -p 3.11
+source .venv/bin/activate
 python -m ensurepip --upgrade
 python -m pip install -r requirements.txt -i https://mirrors.aliyun.com/pypi/simple
-source .venv/bin/activate
 ```
 
 ### 离线运行示例
