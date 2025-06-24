@@ -26,7 +26,7 @@ uvicorn app.server:app --reload
 ```
 请求 demo
 ```bash
-PYTHONPATH=$PYTHONPATH:. python exps/req_high_comments_demo.py
+python exps/req_high_comments_demo.py
 ```
 
 
