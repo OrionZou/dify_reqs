@@ -1,0 +1,13 @@
+[llm]
+model = "qwen-turbo-latest"
+base_url = "https://dashscope.aliyuncs.com/compatible-mode/v1"
+api_key = "" 
+max_tokens = 8192
+temperature = 0.3
+
+# [llm]
+# model = "deepseek-chat"
+# base_url = "https://api.deepseek.com"
+# api_key = "" 
+# max_tokens = 2048
+# temperature = 0.0
