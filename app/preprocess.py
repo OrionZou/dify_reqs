@@ -24,3 +24,11 @@ def is_valid_uid(uid: str) -> bool:
         return False
 
     return True
+
+
+def preprocess(comment_list):
+    filtered_data = []
+    for comment in comment_list:
+        if isinstance(comment["comment_content"], str) and comment["comment_content"].strip() != "":
+            filtered_data.append(comment)
+    return filtered_data

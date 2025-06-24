@@ -16,7 +16,7 @@ def extract_comments_by_video_id(file_path: str) -> dict:
         }
         comment_info = {
             "comment_content": row['评论内容'],
-            "user_name": row['用户名称'],
+            # "user_name": row['用户名称'],
             "comment_time": str(row['创建时间']),
             "ip_address": row['IP未知'],
             "response_count": int(row['回复数']),
