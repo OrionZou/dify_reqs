@@ -17,11 +17,17 @@ source .venv/bin/activate
 PYTHONPATH=$PYTHONPATH:. python3 app/offline_main.py
 ```
 
-### web server 启动
+### web server 
 
+调试模式
 ```bash
 uvicorn app.server:app --reload
 ```
+正式启动
+```bash
+uvicorn app.server:app --host 0.0.0.0 --port 8711
+```
+
 请求 demo
 ```bash
 python exps/req_high_comments_demo.py

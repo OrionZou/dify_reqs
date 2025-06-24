@@ -13,25 +13,6 @@ llm_settings = load_llm_settings_from_toml("agent/config.toml")
 llm = LLM(llm_settings)
 app = FastAPI()
 
-# ---- 引入你已有的模型 ----
-
-# class Comment(BaseModel):
-#     comment_content: str = Field(..., description="用户发布的评论内容")
-#     uid: str = Field(..., description="评论在平台上的唯一标识 UID")
-#     user_name: str | None = Field(None, description="评论发布者的昵称或用户名")
-#     comment_time: datetime | None = Field(None, description="评论发布时间")
-#     ip_address: str | None = Field(None, description="IP 属地")
-#     response_count: int | None = Field(None, description="评论回复数")
-#     like_count: int | None = Field(None, description="评论点赞数")
-
-# class HighIntentComment(BaseModel):
-#     comment_content: str = Field(..., description="高意向评论内容")
-#     reason: str = Field(..., description="判断为高意向的原因")
-#     uid: str = Field(..., description="用户 UID")
-
-# class HighIntentCommentList(BaseModel):
-#     high_intent_comment_list: List[HighIntentComment]
-
 class HighIntentRequest(BaseModel):
     vedio_info: str
     comment_list: List[dict]
