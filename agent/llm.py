@@ -171,6 +171,8 @@ class LLM:
         response_format: BaseModel,
         system_msgs: Optional[List[Union[dict, Message]]] = None,
         temperature: Optional[float] = None,
+        stream: bool = False,
+        enable_thinking: bool = False,
     ) -> BaseModel:
         """
         Send a prompt to the LLM  and parse the response into the specified structured output.
@@ -207,6 +209,8 @@ class LLM:
                 max_tokens=self.max_tokens,
                 temperature=temperature or self.temperature,
                 response_format={"type": "json_object"},
+                stream = stream,
+                extra_body={"enable_thinking": enable_thinking}
             )
             response_str = response.choices[0].message.content
             print(response_str)

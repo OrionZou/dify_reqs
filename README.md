@@ -150,7 +150,7 @@ python exps/req_high_comments_demo.py
 
 ### 请求示例
 ```bash
-curl -X POST http://117.50.44.194:80/get_high_intent_comments \
+curl -X POST http://<ip_address>:<port>/get_high_intent_comments \
 -H "Content-Type: application/json" \
 -d '{
     "vedio_info": "行业: 教育 关键字: 在线学习",
